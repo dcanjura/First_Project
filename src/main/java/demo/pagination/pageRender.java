@@ -55,11 +55,11 @@ public class pageRender<T> {
         return page.isLast();
     }
 
-    public boolean itHasNext(){
+    public boolean hasNext(){
         return page.hasNext();
     }
 
-    public boolean itHasPrevious(){
+    public boolean hasPrevious(){
         return page.hasPrevious();
     }
 }

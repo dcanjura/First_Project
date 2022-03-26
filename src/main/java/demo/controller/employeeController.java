@@ -24,7 +24,7 @@ public class employeeController {
         pageRender<Employees> pageRender = new pageRender<>("/listing", employees);
         model.addAttribute("Title", "Employees List");
         model.addAttribute("employees", employees);
-        model.addAttribute("Page", pageRender);
+        model.addAttribute("page", pageRender);
 
         return "listing";
     }
