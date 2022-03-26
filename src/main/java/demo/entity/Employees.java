@@ -16,12 +16,13 @@ public class Employees {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long id;
 
     @NotEmpty
     private String name;
     @NotEmpty
-    private String lastName;
+    @Column(name = "last_name")
+    private String lastname;
     @NotEmpty
     @Email
     private String email;
@@ -35,12 +36,15 @@ public class Employees {
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
+    
+    public Employees() {
+    	super();
+    }
 
-    public Employees(Long ID, String name, String lastName, String email, String phone, String gender, Double salary, Date date) {
-        super();
-        this.ID = ID;
+    public Employees(Long id, String name, String lastname, String email, String phone, String gender, Double salary, Date date) {
+        this.id = id;
         this.name = name;
-        this.lastName = lastName;
+        this.lastname = lastname;
         this.email = email;
         this.phone = phone;
         this.gender = gender;

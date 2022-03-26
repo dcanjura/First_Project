@@ -21,9 +21,9 @@ public class employeeController {
     public String listingEmployees(@RequestParam(name = "page", defaultValue = "0") int page, Model model){
         Pageable pageRequest = PageRequest.of(page, 5);
         Page<Employees> employees = employeeService.findAll(pageRequest);
-        pageRender<Employees> pageRender = new pageRender<>("listing", employees);
+        pageRender<Employees> pageRender = new pageRender<>("/listing", employees);
         model.addAttribute("Title", "Employees List");
-        model.addAttribute("Employees", employees);
+        model.addAttribute("employees", employees);
         model.addAttribute("Page", pageRender);
 
         return "listing";
