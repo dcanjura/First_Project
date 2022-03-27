@@ -21,6 +21,16 @@
 				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link">Welcome [[${#httpServletRequest.remoteUser}]]
+					</a>
+					</li>
+					<form class="d-flex" th:action="@{/logout}" method="post">
+						<input class="btn btn-secondary" type="submit" value="Log out">
+					</form>
+				</ul>
+			</div>
 		</nav>
 	</header>
 
