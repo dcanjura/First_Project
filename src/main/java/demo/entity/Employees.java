@@ -21,18 +21,24 @@ public class Employees {
 
     @NotEmpty
     private String name;
+
     @NotEmpty
     @Column(name = "last_name")
     private String lastname;
+
     @NotEmpty
     @Email
     private String email;
+
     @NotNull
     private String phone;
+
     @NotEmpty
     private String gender;
+
     @NotNull
     private Double salary;
+
     @NotNull
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")

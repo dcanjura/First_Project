@@ -1,5 +1,6 @@
 package demo.controller;
 
+import demo.Service.employeeService;
 import demo.entity.Employees;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,7 +24,7 @@ import java.util.Map;
 public class employeeController {
 
     @Autowired
-    private demo.Service.employeeService employeeService;
+    private employeeService employeeService;
 
     @GetMapping("view/{id}")
     public String viewEmployeeDetails(@PathVariable(value= "id") Long id, Map<String, Object> model, RedirectAttributes flash){
